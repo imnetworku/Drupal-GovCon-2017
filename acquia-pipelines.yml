@@ -40,4 +40,7 @@ events:
         - build-artifact:
             type: script
             script:
-              - source ${BLT_DIR}/scripts/pipelines/build_artifact
+              - mkdir /tmp/acli-push-artifact
+              - acli push:artifact --dry-run --no-clone --no-commit
+              - mv .git /tmp/acli-push-artifact/
+              - shopt -s dotglob && rm -rf ./* && mv /tmp/acli-push-artifact/* ./
