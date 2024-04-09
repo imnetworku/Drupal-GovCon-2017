@@ -290,6 +290,9 @@
             },
             "drupal/google_analytics": {
                 "install from config": "https://git.drupalcode.org/project/google_analytics/-/merge_requests/33.patch"
+            },
+            "drupal/autosave_form": {
+                "PHP 8.2 Deprecation #3355495": "https://www.drupal.org/files/issues/2023-04-20/autosave_form-dynamic-property-deprecation.patch"
             }
         },
         "drupal-scaffold": {
