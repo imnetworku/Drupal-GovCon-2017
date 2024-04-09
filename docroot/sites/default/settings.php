@@ -702,13 +702,14 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
  *
  * Keep this code block at the end of this file to take full effect.
  */
-# if (file_exists(__DIR__ . '/settings.local.php')) {
-#   include __DIR__ . '/settings.local.php';
-# }
-require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";
 
-# IMPORTANT
-# Do not include additional settings here. Instead, add them to settings included
-# by `blt.settings.php`. See [BLT's documentation](http://blt.readthedocs.io)
-# for more detail.
-#
+/**
+ * IMPORTANT.
+ *
+ * Do not include additional settings here. Instead, add them to settings
+ * included by `acquia-recommended.settings.php`. See Acquia's documentation for more detail.
+ *
+ * @link https://docs.acquia.com/
+ */
+
+require DRUPAL_ROOT . "/../vendor/acquia/drupal-recommended-settings/settings/acquia-recommended.settings.php";

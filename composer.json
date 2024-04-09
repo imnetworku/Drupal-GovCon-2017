@@ -128,7 +128,8 @@
             "drupal/core-composer-scaffold": true,
             "acquia/blt": true,
             "oomphinc/composer-installers-extender": true,
-            "phpro/grumphp": true
+            "phpro/grumphp": true,
+            "acquia/drupal-recommended-settings": true
         }
     },
     "minimum-stability": "dev",
@@ -139,6 +140,7 @@
         "ext-pdo": "*",
         "acquia/blt": "^13",
         "acquia/blt-behat": "dev-master",
+        "acquia/drupal-recommended-settings": "^1.0@beta",
         "acquia/memcache-settings": "^1.1",
         "bower-asset/blazy": "^1.8",
         "chartjs/chartjs": "3.9.1",

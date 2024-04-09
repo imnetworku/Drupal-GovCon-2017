@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a5a106672e80aa314e1eff957b9d3613",
+    "content-hash": "3fa0e146ce8395db148ab42d8b80d3c0",
     "packages": [
         {
             "name": "acquia/blt",
@@ -200,6 +200,68 @@
                 "source": "https://github.com/acquia/drupal-environment-detector/tree/1.6.0"
             },
             "time": "2023-02-28T18:45:28+00:00"
+        },
+        {
+            "name": "acquia/drupal-recommended-settings",
+            "version": "1.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/acquia/drupal-recommended-settings.git",
+                "reference": "29c517dc57605b7a93c0dbe072722eaa5135851c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/acquia/drupal-recommended-settings/zipball/29c517dc57605b7a93c0dbe072722eaa5135851c",
+                "reference": "29c517dc57605b7a93c0dbe072722eaa5135851c",
+                "shasum": ""
+            },
+            "require": {
+                "acquia/drupal-environment-detector": "^1.5.3",
+                "composer-plugin-api": "^2",
+                "consolidation/config": "^2.0.0",
+                "grasmash/yaml-expander": "^3.0",
+                "loophp/phposinfo": "^1.7.1",
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "acquia/coding-standards": "^2.0",
+                "composer/composer": "^2.2",
+                "dealerdirect/phpcodesniffer-composer-installer": "^1.0.0",
+                "ergebnis/composer-normalize": "^2.30.2",
+                "phpro/grumphp-shim": "^2.2",
+                "phpunit/phpunit": "^9 || ^10"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Acquia\\Drupal\\RecommendedSettings\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Acquia\\Drupal\\RecommendedSettings\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Vishal Khode",
+                    "email": "vishal.khode@acquia.com"
+                }
+            ],
+            "description": "The composer plugin for adding drupal-recommended-settings for Acquia Cloud.",
+            "keywords": [
+                "acquia",
+                "drupal",
+                "drupal-recommended-settings"
+            ],
+            "support": {
+                "docs": "https://docs.acquia.com/drupal-recommended-settings/",
+                "issues": "https://github.com/acquia/drupal-recommended-settings/issues",
+                "source": "https://github.com/acquia/drupal-recommended-settings/tree/1.0.0-beta1"
+            },
+            "time": "2024-01-18T06:50:22+00:00"
         },
         {
             "name": "acquia/memcache-settings",
