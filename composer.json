@@ -224,6 +224,13 @@
         "superfish/superfish": "^1.7"
     },
     "scripts": {
+        "site-install": [
+            "vendor/bin/drush site-install minimal --existing-config --no-interaction -v --ansi"
+        ],
+        "run-validation": [
+            "composer validate --no-check-all --ansi",
+            "vendor/bin/grumphp run"
+        ],
         "post-install-cmd": [
             "PhantomInstaller\\Installer::installPhantomJS"
         ],
@@ -318,13 +325,7 @@
         "patchLevel": {
             "drupal/core": "-p2"
         },
-        "patches-ignore": {
-            "drupal/lightning_core": {
-                "drupal/core": {
-                    "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2869592-remove-update-warning-7.patch"
-                }
-            }
-        }
+        "patches-ignore": {}
     },
     "autoload": {
         "psr-4": {
