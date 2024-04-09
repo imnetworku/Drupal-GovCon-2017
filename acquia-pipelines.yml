@@ -25,6 +25,7 @@ events:
             type: script
             script:
               - source ${BLT_DIR}/scripts/pipelines/validate
+              - vendor/bin/grumphp run
         - setup-app:
             type: script
             script:
