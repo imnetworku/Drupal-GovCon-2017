@@ -3,8 +3,6 @@ Welcome to the repo for the Drupal GovCon event website. This is an open source 
 
 ## Getting Started
 
-This project built with BLT, an open-source project template and tool that enables building, testing, and deploying Drupal installations following Acquia Professional Services best practices.
-
 * Ensure that your computer meets the minimum installation requirements (and then install the required applications). See the [BLT System Requirements](https://docs.acquia.com/blt/install/) and [Lando System Requirements](https://docs.lando.dev/basics/installation.html).
 * Fork the parent repository in GitHub
 * Request access to the Drupal4Gov organization in GitHub
@@ -18,19 +16,19 @@ After creating a fork of the repository in Github 9and installing all dependenci
 * `git clone` (clone your fork)
 * `composer install` (install dependencies for the project)
 * `lando start` (provision the vm)
-* `lando blt setup` (install Drupal)
+* `lando composer site-install` (install Drupal)
 
-## Working with Lando and BLT
+## Working with Lando and Composer Scripts
 
 Our team utilizes a standard [Git flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) for our development workflow. You can read more about our recommended workflow in the [BLT docs](https://docs.acquia.com/blt/developer/dev-workflow/#workflow-example-local-development).
 
-In general, "all" commands (drush, blt, etc.) should be run "inside" the Lando container. You can do this by first running the `lando` command.
+In general, "all" commands (drush, composer, etc.) should be run "inside" the Lando container. You can do this by first running the `lando` command.
 
 For example:
 
 Cleanly Install Drupal:
 
-`lando blt setup`
+`lando composer site-install`
 
 Sync Drupal Database from Cloud:*
 

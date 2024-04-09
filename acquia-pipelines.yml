@@ -18,18 +18,21 @@ events:
             type: script
             script:
               - composer install --ansi
-              - source ${BLT_DIR}/scripts/pipelines/setup_env
+              # Set git info.
+              - git config --global user.name "Acquia Cloud"
+              - git config --global user.email "no-reply@example.com"
+              # Create MySQL DB.
+              - mysql -u root -proot -e "CREATE DATABASE IF NOT EXISTS drupal"
               - nvm install v14.17
               - npm install -g npm@9.6.7
         - validate:
             type: script
             script:
-              - source ${BLT_DIR}/scripts/pipelines/validate
-              - vendor/bin/grumphp run
+              - composer run-validation
         - setup-app:
             type: script
             script:
-              - source ${BLT_DIR}/scripts/pipelines/setup_app
+              - composer site-install
         - tests:
             type: script
             script:
