@@ -219,7 +219,7 @@
         "enyo/dropzone": "^5",
         "guzzlehttp/promises": "1.5.0",
         "jquery-ui/jquery-ui-touch-punch": "dev-master",
-        "mikemadison13/blt-drupal-check": "dev-main",
+        "mglaman/drupal-check": "^1.4",
         "mikemadison13/blt-lando": "dev-main",
         "mmenu/mmenu": "^8.5",
         "slick/slick": "^1.9.0",
@@ -238,7 +238,9 @@
         ],
         "run-validation": [
             "composer validate --no-check-all --ansi",
-            "vendor/bin/grumphp run"
+            "vendor/bin/grumphp run",
+            "vendor/bin/drupal-check -d docroot/modules/custom",
+            "vendor/bin/drupal-check -d docroot/themes/custom"
         ],
         "run-security": [
             "composer audit",
