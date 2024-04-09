@@ -3,10 +3,3 @@ grumphp:
     composer: null
     phplint: null
     yamllint: null
-    twigcs:
-      path: 'docroot/themes/custom'
-      severity: 'warning'
-      display: 'all'
-      ruleset: 'FriendsOfTwig\Twigcs\Ruleset\Official'
-      triggered_by: [ 'twig' ]
-      exclude: [ ]
