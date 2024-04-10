@@ -29,7 +29,6 @@ events:
             script:
               - cd $SOURCE_DIR
               - composer install --ansi
-              - cd docroot/themes/custom/twentynineteen;npm ci; npm run build
         - validate:
             type: script
             script:
