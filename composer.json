@@ -247,7 +247,8 @@
             "vendor/bin/security-checker security:check composer.lock"
         ],
         "post-install-cmd": [
-            "PhantomInstaller\\Installer::installPhantomJS"
+            "PhantomInstaller\\Installer::installPhantomJS",
+            "cd docroot/themes/custom/twentynineteen;npm ci; npm run build"
         ],
         "post-update-cmd": [
             "PhantomInstaller\\Installer::installPhantomJS"
