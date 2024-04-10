@@ -29,7 +29,7 @@ widgets:
     settings:
       submit_text: Select
       upload_location: 'public://'
-      multiple: '1'
+      multiple: true
       extensions: 'jpg jpeg png gif'
       media_type: image
       target_bundles: {  }

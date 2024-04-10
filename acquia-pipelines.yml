@@ -17,7 +17,6 @@ events:
         - setup-env:
             type: script
             script:
-              - composer install --ansi
               # Set git info.
               - git config --global user.name "Acquia Cloud"
               - git config --global user.email "no-reply@example.com"
@@ -25,13 +24,21 @@ events:
               - mysql -u root -proot -e "CREATE DATABASE IF NOT EXISTS drupal"
               - nvm install v14.17
               - npm install -g npm@9.6.7
+        - dependencies:
+            type: script
+            script:
+              - cd $SOURCE_DIR
+              - composer install --ansi
+              - cd docroot/themes/custom/twentynineteen;npm ci; npm run build
         - validate:
             type: script
             script:
+              - cd $SOURCE_DIR
               - composer run-validation
         - setup-app:
             type: script
             script:
+              - cd $SOURCE_DIR
               - composer site-install
         - tests:
             type: script
@@ -40,6 +47,7 @@ events:
         - build-artifact:
             type: script
             script:
+              - cd $SOURCE_DIR
               - mkdir /tmp/acli-push-artifact
               - acli push:artifact --dry-run --no-clone --no-commit
               - mv .git /tmp/acli-push-artifact/
