@@ -3,18 +3,22 @@ Welcome to the repo for the Drupal GovCon event website. This is an open source 
 
 ## Getting Started
 
-* Ensure that your computer meets the minimum installation requirements (and then install the required applications). See the [BLT System Requirements](https://docs.acquia.com/blt/install/) and [Lando System Requirements](https://docs.lando.dev/basics/installation.html).
+* Ensure that your computer meets the minimum installation requirements (and then install the required applications). See the [DDEV System Requirements](https://ddev.readthedocs.io/en/stable/users/install/ddev-installation/) or [Lando System Requirements](https://docs.lando.dev/basics/installation.html).
 * Fork the parent repository in GitHub
 * Request access to the Drupal4Gov organization in GitHub
 * Request access to the Acquia Cloud Environment for Drupal GovCon
-* Setup a SSH key that can be used for GitHub and the Acquia Cloud (you CAN use the same key)
+* Setup an SSH key that can be used for GitHub and the Acquia Cloud (you CAN use the same key)
     * [Setup GitHub SSH Keys](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
     * [Setup Acquia Cloud SSH Keys](https://docs.acquia.com/acquia-cloud/ssh/generate)
 
-After creating a fork of the repository in Github 9and installing all dependencies above) there are only 4 commands to get started:
+After creating a fork of the repository in GitHub and installing all dependencies above) there are only 4 commands to get started:
+This project supports both DDEV and Lando but It's recommended to only run one at a time.
+Before you switch make sure you do either a DDEV poweroff or Lando Poweroff. You must turn off the one you are not using to avoid conflicts.
 
 * `git clone` (clone your fork)
 * `composer install` (install dependencies for the project)
+Choose between DDEV or Lando
+* 
 * `lando start` (provision the vm)
 * `lando composer site-install` (install Drupal)
 
