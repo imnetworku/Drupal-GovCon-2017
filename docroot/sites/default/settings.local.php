@@ -162,3 +162,4 @@ $lando_settings = dirname(__FILE__) . '/settings.lando.php';
 if (getenv('LANDO_INFO')) {
     require $lando_settings;
  }
+ 
