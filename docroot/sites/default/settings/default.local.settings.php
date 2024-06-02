@@ -5,7 +5,7 @@
  * Local development override configuration feature.
  */
 
-use Acquia\Blt\Robo\Common\EnvironmentDetector;
+use Acquia\Drupal\RecommendedSettings\Helpers\EnvironmentDetector;
 use Drupal\Component\Assertion\Handle;
 
 $db_name = '${drupal.db.database}';
@@ -25,7 +25,6 @@ $databases['default']['default'] = [
 
 // Use development service parameters.
 $settings['container_yamls'][] = EnvironmentDetector::getRepoRoot() . '/docroot/sites/development.services.yml';
-$settings['container_yamls'][] = EnvironmentDetector::getRepoRoot() . '/docroot/sites/blt.development.services.yml';
 
 // Allow access to update.php.
 $settings['update_free_access'] = TRUE;
@@ -46,8 +45,22 @@ $settings['update_free_access'] = TRUE;
  *
  * @see https://wiki.php.net/rfc/expectations
  */
-assert_options(ASSERT_ACTIVE, TRUE);
-assert_options(ASSERT_EXCEPTION, TRUE);
+/*
+ * If you are using php 8.3 and above assertions options
+ * usage is deprecated.
+ * @see https://www.drupal.org/node/3391611
+ *
+ * If you are using php 8.3 and less
+ * Drupal\Component\Assertion\Handle is deprecated.
+ * @see https://www.drupal.org/node/3105918
+ */
+if (phpversion() >= 8.3 ) {
+  ini_set('zend.assertions', 1);
+}
+else {
+  assert_options(ASSERT_ACTIVE, TRUE);
+  assert_options(ASSERT_EXCEPTION, TRUE);
+}
 
 /**
  * Show all error messages, with backtrace information.
@@ -133,7 +146,7 @@ $settings['skip_permissions_hardening'] = TRUE;
 /**
  * Files paths.
  */
-$settings['file_private_path'] = EnvironmentDetector::getRepoRoot() . '/files-private/default';
+$settings['file_private_path'] = EnvironmentDetector::getRepoRoot() . '/files-private/' . EnvironmentDetector::getSiteName($site_path);
 /**
  * Site path.
  *
