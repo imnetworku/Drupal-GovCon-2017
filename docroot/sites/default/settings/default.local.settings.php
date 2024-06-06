@@ -153,12 +153,12 @@ $settings['skip_permissions_hardening'] = TRUE;
 /** Automatically generated include for settings managed by ddev and modified by to
   * allow a similar workflow with lando */
 
-$ddev_settings = dirname(__FILE__) . '/settings.ddev.php';
+$ddev_settings = DRUPAL_ROOT . 'sites/default/settings.ddev.php';
 if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
   require $ddev_settings;
 }
 
-$lando_settings = dirname(__FILE__) . '/settings.lando.php';
+$lando_settings = DRUPAL_ROOT . 'sites/default/settings.lando.php';
 if (getenv('LANDO_INFO')) {
     require $lando_settings;
  }
