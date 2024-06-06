@@ -35,7 +35,6 @@ if (empty($settings['config_sync_directory'])) {
 /**
  * Files paths.
  */
-// DRUPAL_ROOT . 'sites/default/settings.ddev.php';
 $settings['file_private_path'] = $app_root . '/files-private/default';
 // Enable verbose logging for errors.
 // https://www.drupal.org/forum/support/post-installation/2018-07-18/enable-drupal-8-backend-errorlogdebugging-mode
