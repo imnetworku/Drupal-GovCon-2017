@@ -21,4 +21,4 @@ web_environment:
 hooks:
   post-start:
   - exec: nvm install 14
-  - exec: cd /docroot/themes/custom/twentynineteen && npm install
+  - exec: bash -c 'cd docroot/themes/custom/twentynineteen && npm install'
