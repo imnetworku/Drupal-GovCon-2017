@@ -12,8 +12,13 @@ database:
 use_dns_when_possible: true
 composer_version: "2"
 corepack_enable: false
+nodejs_version: "14"
 disable_settings_management: true
 web_environment:
     - ah_application_uuid=db2dea89-3758-ce04-edf6-e70c30252a87
     - ah_site_group=capitalcamp
     - DRUSH_OPTIONS_URI=$DDEV_PRIMARY_URL
+hooks:
+  post-start:
+  - exec: nvm install 14
+  - exec: cd /docroot/themes/custom/twentynineteen && npm install
