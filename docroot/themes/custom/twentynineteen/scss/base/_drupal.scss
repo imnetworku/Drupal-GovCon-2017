@@ -1,3 +1,6 @@
+@use "variables/colors";
+@use "extendables";
+
 body {
   button.tabledrag-toggle-weight {
     margin: 5px;
@@ -50,7 +53,7 @@ form .description {
 .layout-node-form .layout-region-node-footer {
   padding-top: 20px;
   margin-top: 20px;
-  border-top: 1px solid $off-white;
+  border-top: 1px solid colors.$off-white;
 }
 
 form details.js-form-wrapper {

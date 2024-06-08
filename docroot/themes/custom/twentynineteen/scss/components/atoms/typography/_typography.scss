@@ -1,3 +1,5 @@
+@use "../../../base/variables/colors";
+
 // Base Typography
 //
 // Markup: typography.twig
@@ -11,21 +13,21 @@ h5,
 h6 {
   text-rendering: optimizeLegibility;
   font-weight: 700;
-  color: $color-primary;
+  color: colors.$color-primary;
 }
 
 h1 {
-  color: $color-primary;
+  color: colors.$color-primary;
   font-size: 2.5em;
 }
 
 h2 {
-  color: $primary-darkest;
+  color: colors.$primary-darkest;
   font-size: 1.875em;
 }
 
 h3 {
-  color: $gray;
+  color: colors.$gray;
   font-size: 1.25em;
 }
 
@@ -49,8 +51,8 @@ pre {
   overflow-x: auto;
 
   code {
-    border: 1px dotted $gray;
-    background: $off-white;
+    border: 1px dotted colors.$gray;
+    background: colors.$off-white;
     padding: 2px 9px;
     display: block;
     font-size: 85%;

@@ -1,3 +1,6 @@
+@use "../../../base/variables/colors";
+@use "../../../base/variables/fonts";
+
 // Tables
 //
 // Markup: table.twig
@@ -5,33 +8,33 @@
 // Style guide: atoms.table
 
 table {
-  font-family: $body_font;
-  border: 1px solid $dark-gray;
+  font-family: fonts.$body_font;
+  border: 1px solid colors.$dark-gray;
   padding: 0.25em;
   width: 100%;
 
   .label {
-    color: $white;
+    color: colors.$white;
   }
 
   thead {
-    background-color: $white-gray;
+    background-color: colors.$white-gray;
     text-align: left;
 
     a,
     a:visited {
-      color: rgba($white, 0.5);
+      color: rgba(colors.$white, 0.5);
     }
 
     a:hover {
-      color: $white;
+      color: colors.$white;
 
       .tablesort--desc::after {
-        border-top-color: $white;
+        border-top-color: colors.$white;
       }
 
       .tablesort--asc::after {
-        border-bottom-color: $white;
+        border-bottom-color: colors.$white;
       }
     }
   }
@@ -47,7 +50,7 @@ table {
       height: 0;
       border-left: 7px solid transparent;
       border-right: 7px solid transparent;
-      border-top: 10px solid rgba($white, 0.5);
+      border-top: 10px solid rgba(colors.$white, 0.5);
     }
   }
 
@@ -62,26 +65,26 @@ table {
       height: 0;
       border-left: 7px solid transparent;
       border-right: 7px solid transparent;
-      border-bottom: 10px solid rgba($white, 0.5);
+      border-bottom: 10px solid rgba(colors.$white, 0.5);
     }
   }
 
   th {
-    border: 1px solid $dark-gray;
+    border: 1px solid colors.$dark-gray;
     font-weight: 700;
     padding: 0.5em;
   }
 
   td {
-    border: 1px solid $dark-gray;
+    border: 1px solid colors.$dark-gray;
     outline: none;
     padding: 0.5em;
   }
 
   tfoot {
-    border-top: 1px solid $color-primary;
+    border-top: 1px solid colors.$color-primary;
     background-color: rgba(28, 187, 180, 0.2);
-    color: $mediumteal;
+    color: colors.$mediumteal;
     font-size: 0.875em;
     font-weight: 700;
     text-align: left;

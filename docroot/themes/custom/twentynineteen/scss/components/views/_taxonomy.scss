@@ -1,3 +1,5 @@
+@use "../../base" as *;
+
 .view-taxonomy-term {
   .node--view-mode-teaser {
     margin: 3rem 0;
@@ -12,6 +14,6 @@ li.node-readmore {
   padding-left: 0 !important;
 
   a {
-    @extend a.button;
+    @extend button;
   }
 }

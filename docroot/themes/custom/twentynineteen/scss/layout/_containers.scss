@@ -1,9 +1,11 @@
+@use "../base/mixins";
+
 //////////////////////////////////
 // Primary Container Rules ///////
 //////////////////////////////////
 
 .cog--mq {
-  @include container(80em);
+  @include mixins.container(80em);
 
   margin: 10px auto;
 }

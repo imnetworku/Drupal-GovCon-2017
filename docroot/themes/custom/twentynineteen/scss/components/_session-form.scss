@@ -1,14 +1,16 @@
+@use "../base/variables/colors";
+
 .field--name-field-session-co-presenter-s- {
   .tabledrag-toggle-weight {
     letter-spacing: normal;
     background: transparent;
-    color: $color-primary;
+    color: colors.$color-primary;
     text-transform: inherit;
     font-weight: normal;
     padding: 0;
 
     &:hover {
-      color: $primary-darkest;
+      color: colors.$primary-darkest;
       text-decoration: underline;
     }
   }

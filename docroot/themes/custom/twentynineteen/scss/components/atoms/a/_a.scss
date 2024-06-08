@@ -1,23 +1,25 @@
+@use "../../../base/variables/colors";
+
 // Link
 //
 // Markup: a.twig
 //
 // Style guide: atoms.a
 a {
-  color: $link;
+  color: colors.$link;
   cursor: inherit;
 }
 
 a:visited {
-  color: $link-visited;
+  color: colors.$link-visited;
 }
 
 a:hover {
-  color: $primary-darkest;
+  color: colors.$primary-darkest;
   text-decoration: underline;
   cursor: pointer;
 }
 
 a:focus {
-  color: $link-focus;
+  color: colors.$link-focus;
 }

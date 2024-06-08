@@ -1,3 +1,5 @@
+@use "../base" as *;
+
 nav.breadcrumb {
   @extend .blocked-style;
 
@@ -5,7 +7,7 @@ nav.breadcrumb {
   color: $gray;
 
   ol {
-    @extend %no-ul-list;
+    // @extend %no-ul-list;
 
     li::before {
       content: '/';

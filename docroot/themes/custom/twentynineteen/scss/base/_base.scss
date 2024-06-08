@@ -1,3 +1,6 @@
+@use "variables/colors";
+@use "variables/fonts";
+
 // Base HTML Elements.
 html,
 body {
@@ -7,10 +10,10 @@ body {
 }
 
 body {
-  background-color: $white;
-  color: $gray;
+  background-color: colors.$white;
+  color: colors.$gray;
   font-size: 1em;
-  font-family: $body_font;
+  font-family: fonts.$body_font;
   text-rendering: optimizeLegibility;
   font-weight: 400;
   line-height: 1.4;

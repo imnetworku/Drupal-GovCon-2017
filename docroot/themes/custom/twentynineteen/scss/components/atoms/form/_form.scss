@@ -1,3 +1,5 @@
+@use "../../../base/variables/colors";
+
 // Forms
 //
 // Base form elements.
@@ -15,8 +17,8 @@ form .form-item {
 
 .form-item {
   .field--label-inline .field__label {
-    background: $light-gold;
-    color: $blk;
+    background: colors.$light-gold;
+    color: colors.$blk;
     font-weight: 700;
     line-height: 28px;
     margin: 0.25rem 0.5rem 0.25rem 0;
@@ -25,7 +27,7 @@ form .form-item {
 }
 
 .views-label {
-  background: $light-gold;
+  background: colors.$light-gold;
   font-weight: 700;
   line-height: 28px;
   margin: 0.25rem 0.5rem 0.25rem 0;
@@ -33,7 +35,7 @@ form .form-item {
 }
 
 form button.link-edit-summary {
-  color: $gray !important;
+  color: colors.$gray !important;
   text-transform: capitalize;
   font-weight: 500;
   font-size: 1em;
@@ -53,7 +55,7 @@ form button.link-edit-summary {
 
 label {
   display: block;
-  color: $gray;
+  color: colors.$gray;
   cursor: pointer;
   font-weight: 400;
   margin: 0 0 0.1875em;
@@ -64,7 +66,7 @@ label {
 .form-required::after {
   content: '*';
   margin-left: 0.2rem;
-  color: $red;
+  color: colors.$red;
 }
 
 input[type="text"],
@@ -72,9 +74,9 @@ input[type="password"],
 input[type="date"],
 textarea {
   font-family: inherit;
-  border: 1px solid $dark-gray;
+  border: 1px solid colors.$dark-gray;
   border-radius: 0;
-  color: $darker-gray;
+  color: colors.$darker-gray;
   display: block;
   font-size: 1.1em;
   margin: 0 0 1em;
@@ -84,14 +86,14 @@ textarea {
   transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
 
   &:focus {
-    box-shadow: 0 0 0.2em 0.1em rgba($color-primary, 0.5);
+    box-shadow: 0 0 0.2em 0.1em rgba(colors.$color-primary, 0.5);
   }
 }
 
 input[type="text"]:disabled,
 input[type="text"]:disabled:hover,
 textarea:disabled {
-  background-color: rgba($color-primary, 0.1);
+  background-color: rgba(colors.$color-primary, 0.1);
 }
 
 input[type="file"],
@@ -133,7 +135,7 @@ input[type="checkbox"] {
       width: 20px;
       height: 20px;
       margin-right: 1em;
-      background-color: $color-primary;
+      background-color: colors.$color-primary;
     }
   }
 }
@@ -148,7 +150,7 @@ input[type="checkbox"] + label::before {
 
 input[type="radio"]:checked + label::before {
   content: "\2022";
-  color: $white;
+  color: colors.$white;
   font-size: 4em;
   text-align: center;
   line-height: 0.335;
@@ -159,20 +161,20 @@ input[type="checkbox"]:checked + label::before {
   background-repeat: no-repeat;
   background-position: center;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-  color: $white;
+  color: colors.$white;
   text-align: center;
 }
 
 input[type="radio"]:disabled + label::before,
 input[type="checkbox"]:disabled + label::before {
-  background-color: rgba($color-primary, 0.5);
+  background-color: rgba(colors.$color-primary, 0.5);
 }
 
 select {
-  background: $white;
-  border: 1px solid $dark-gray;
+  background: colors.$white;
+  border: 1px solid colors.$dark-gray;
   border-radius: 0;
-  color: $darker-gray;
+  color: colors.$darker-gray;
   text-transform: uppercase;
   font-size: 1em;
   letter-spacing: 0.02em;
@@ -184,7 +186,7 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   padding: 0.5em;
-  background-image: linear-gradient(45deg, transparent 50%, $darker-gray 50%), linear-gradient(135deg, $darker-gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
+  background-image: linear-gradient(45deg, transparent 50%, colors.$darker-gray 50%), linear-gradient(135deg, colors.$darker-gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
   background-position: calc(100% - 1.5em) calc(0.875em + 0.125em), calc(100% - 1em) calc(0.875em + 0.125em), calc(100% - 2.5em) 0.5em;
   background-size: 0.5em 0.5em, 0.5em 0.5em, 0 0;
   background-repeat: no-repeat;
@@ -193,7 +195,7 @@ select {
 }
 
 fieldset {
-  border: 1px solid $med-gray;
+  border: 1px solid colors.$med-gray;
   border-radius: 0;
   margin: 1em 0 2em;
 
@@ -205,9 +207,9 @@ fieldset {
 
 // Target the legend that occurs within
 .fieldset-wrapper fieldset legend .fieldset-legend {
-  border-bottom: 2px solid $gold;
+  border-bottom: 2px solid colors.$gold;
   background: transparent;
-  color: $darker-gray;
+  color: colors.$darker-gray;
   text-transform: capitalize;
   margin-left: 0.5rem;
   padding-left: 0.25rem;
@@ -215,8 +217,8 @@ fieldset {
 }
 
 fieldset .fieldset-legend {
-  background-color: $primary-darkest;
-  color: $white;
+  background-color: colors.$primary-darkest;
+  color: colors.$white;
   display: block;
   font-weight: bold;
   padding: 0.25em 0.5em;
@@ -228,7 +230,7 @@ fieldset .fieldset-legend {
 .error,
 .error textarea,
 .error select {
-  border-color: $red;
+  border-color: colors.$red;
   background-color: rgba(198, 15, 19, 0.1);
   margin-bottom: 0;
 }
@@ -236,13 +238,13 @@ fieldset .fieldset-legend {
 .error input:focus,
 .error textarea:focus,
 .error select:focus {
-  background: $off-white;
-  border-color: $light-gray;
+  background: colors.$off-white;
+  border-color: colors.$light-gray;
 }
 
 .error label,
 .error label.error {
-  color: $red;
+  color: colors.$red;
 }
 
 .error > small,
@@ -253,7 +255,7 @@ fieldset .fieldset-legend {
   margin-bottom: 1em;
   font-size: 0.75em;
   font-weight: bold;
-  background: $red;
+  background: colors.$red;
   color: #fff;
 }
 
@@ -263,29 +265,29 @@ fieldset .fieldset-legend {
 
 input.error,
 textarea.error {
-  border-color: $red;
+  border-color: colors.$red;
   background-color: rgba(198, 15, 19, 0.1);
   margin-bottom: 0;
 }
 
 input.error:focus,
 textarea.error:focus {
-  background: $off-white;
-  border-color: $light-gray;
+  background: colors.$off-white;
+  border-color: colors.$light-gray;
 }
 
 .error select {
-  border-color: $red;
+  border-color: colors.$red;
   background-color: rgba(198, 15, 19, 0.1);
 }
 
 .error select:focus {
-  background: $off-white;
-  border-color: $light-gray;
+  background: colors.$off-white;
+  border-color: colors.$light-gray;
 }
 
 label.error {
-  color: $red;
+  color: colors.$red;
 }
 
 input[type="datetime"],
@@ -300,8 +302,8 @@ input[type="time"],
 input[type="url"] {
   background-color: white;
   font-family: inherit;
-  border: 1px solid $dark-gray;
-  color: $blk;
+  border: 1px solid colors.$dark-gray;
+  color: colors.$blk;
   display: block;
   font-size: 0.875em;
   margin: 0 0 1em;
@@ -312,17 +314,17 @@ input[type="url"] {
   transition: box-shadow 0.45s;
 
   &:focus {
-    box-shadow: 0 0 0.2em 0.1em rgba($color-primary, 0.5);
+    box-shadow: 0 0 0.2em 0.1em rgba(colors.$color-primary, 0.5);
   }
 }
 
 form input[disabled],
 form button[disabled] {
-  background-color: $light-gray;
+  background-color: colors.$light-gray;
   box-shadow: none;
 
   &:hover {
-    background-color: $light-gray;
+    background-color: colors.$light-gray;
   }
 }
 
@@ -342,8 +344,8 @@ form input {
 }
 
 .field--label-inline .field__label {
-  background: $light-gold;
-  color: $blk;
+  background: colors.$light-gold;
+  color: colors.$blk;
   font-weight: 700;
   line-height: 28px;
   margin: 0.25rem 0.5rem 0.25rem 0;

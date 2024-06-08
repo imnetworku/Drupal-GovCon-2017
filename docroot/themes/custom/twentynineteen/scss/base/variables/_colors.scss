@@ -1,3 +1,4 @@
+@use "sass:color";
 // Common Colors
 $white: #fff;
 $red: #981b1e;
@@ -10,7 +11,7 @@ $darker-gray: #5b616b;
 $med-gray: #a9aeb1;
 $light-gray: #d6d7d9;
 $lighter-gray: #f8f8f8;
-$off-white: lighten($blk, 97%);
+$off-white: color.adjust($blk, $lightness: 97%);
 $white-gray: #f1f1f1;
 
 // gold colors
