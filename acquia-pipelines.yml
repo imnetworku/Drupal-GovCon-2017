@@ -24,7 +24,7 @@ events:
               - mysql -u root -proot -e "CREATE DATABASE IF NOT EXISTS drupal"
               - ldd --version
               # Acquia pipelines need to be uopdated to go higher than npm 10
-              - nvm install v20
+              - nvm install v16
               - npm install -g npm@9.6.7
         - dependencies:
             type: script
