@@ -22,8 +22,10 @@ events:
               - git config --global user.email "no-reply@example.com"
               # Create MySQL DB.
               - mysql -u root -proot -e "CREATE DATABASE IF NOT EXISTS drupal"
-              - nvm install v20.13
-              - npm install -g npm@10.5.2
+              - ldd --version
+              # Acquia pipelines need to be uopdated to go higher than npm 10
+              - nvm install v20
+              - npm install -g npm@9.6.7
         - dependencies:
             type: script
             script:
