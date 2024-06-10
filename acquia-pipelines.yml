@@ -23,8 +23,14 @@ events:
               # Create MySQL DB.
               - mysql -u root -proot -e "CREATE DATABASE IF NOT EXISTS drupal"
               - ldd --version
-              # Acquia pipelines need to be uopdated to go higher than npm 10
+        - js:
+            type: script
+            script:
+              # Acquia pipelines need to be updated to go higher than npm 10
+              - cd docroot/themes/custom/twentynineteen
+              - node --version
               - nvm use 20
+              - node --version
               - npm install
         - dependencies:
             type: script
