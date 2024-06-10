@@ -19,4 +19,5 @@ web_environment:
     - DRUSH_OPTIONS_URI=$DDEV_PRIMARY_URL
 hooks:
   post-start:
+  - exec: nvm install v20.5.0
   - exec: bash -c 'cd docroot/themes/custom/twentynineteen && npm install'
