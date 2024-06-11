@@ -1,3 +1,5 @@
+@use "../../base/variables/colors";
+
 .body-sidebars-second aside.sidebar-second > .region-sidebar-second {
   .block-views-blockspecial-announcements-display-block-3 {
     margin-right: -15px;
@@ -33,13 +35,13 @@ aside .block-views-blockspecial-announcements-display-block-3 {
   }
 
   .views-row {
-    border-top: 1px solid $med-gray;
+    border-top: 1px solid colors.$med-gray;
     margin-top: 1.5em;
     padding-top: 0.75em;
   }
 
   .views-row-last {
-    border-bottom: 1px solid $med-gray;
+    border-bottom: 1px solid colors.$med-gray;
     margin-bottom: 1.5em;
     padding-bottom: 0.75em;
   }

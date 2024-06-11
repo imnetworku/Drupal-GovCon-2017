@@ -1,3 +1,6 @@
+@use "../../../base/variables/colors";
+@use "../../../base/variables/fonts";
+
 // Call to Action Block
 //
 // Styling for three call to action blocks on bottom of homepage
@@ -16,15 +19,15 @@
   }
 
   &__text-header {
-    font-family: $body_font;
-    color: $gold;
+    font-family: fonts.$body_font;
+    color: colors.$gold;
     font-size: 2em;
     padding: 0;
     line-height: 80%;
   }
 
   &__text-details {
-    font-family: $body_font;
+    font-family: fonts.$body_font;
     color: rgb(230, 230, 230);
     margin: 0;
     font-size: 0.75em;

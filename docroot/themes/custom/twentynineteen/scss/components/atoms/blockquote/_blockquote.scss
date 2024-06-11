@@ -1,3 +1,5 @@
+@use "../../../base/variables/colors";
+
 // Blockquote
 //
 // Markup: blockquote.twig
@@ -5,8 +7,8 @@
 // Style guide: atoms.blockquote
 blockquote {
   padding: 0 15px;
-  color: $gray;
-  border-left: 4px solid $off-white;
+  color: colors.$gray;
+  border-left: 4px solid colors.$off-white;
 
   &:last-child {
     margin-bottom: 0;

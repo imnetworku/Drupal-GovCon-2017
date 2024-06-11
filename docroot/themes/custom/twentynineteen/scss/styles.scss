@@ -1,9 +1,11 @@
-@import '../node_modules/breakpoint-sass/stylesheets/breakpoint';
+@forward '../node_modules/breakpoint-sass/stylesheets/breakpoint';
+
 
 /**
   Normal reset
 */
-@import "reset";
+@use "reset";
+@use "accessibility/_accessibility";
 
 // Base
 //
@@ -13,13 +15,14 @@
 // to an HTML element, these styles will be the ones displayed.
 //
 // Style guide: base
-@import "./base/variables/breakpoints";
-@import "./base/variables/colors";
-@import "./base/variables/fonts";
-@import "./base/base";
-@import "./base/drupal";
-@import "./base/extendables";
-@import "./base/mixins";
+@forward "base/variables/breakpoints";
+@use "base/variables/colors";
+@use "base/variables/fonts";
+@use "base/base";
+@use "base/drupal";
+@use "base/extendables";
+@use "base/mixins";
+
 
 // Atoms
 //
@@ -28,25 +31,25 @@
 // Atoms are granular site elements that cannot be broken down into smaller components (eg. a, blockquote, list, typography).
 //
 // Style guide: atoms
-@import "components/_example/example_button";
-@import "components/atoms/a/a";
-@import "components/atoms/blockquote/blockquote";
-@import "components/atoms/buttons/buttons";
-@import "components/atoms/form/form";
-@import "components/atoms/hr/hr";
-@import "components/atoms/lists/lists";
-@import "components/atoms/table/table";
-@import "components/atoms/typography/typography";
+@use "components/_example/example_button";
+@use "components/atoms/a/a";
+@use "components/atoms/blockquote/blockquote";
+@use "components/atoms/buttons/buttons";
+@use "components/atoms/form/form";
+@use "components/atoms/hr/hr";
+@use "components/atoms/lists/lists";
+@use "components/atoms/table/table";
+@use "components/atoms/typography/typography";
 
 // Layout
 //
 // These are the layout rules.
 //
 // Style guide: layout
-@import "layout/containers";
-@import "layout/panels";
-@import "layout/post-content";
-@import "layout/sidebars";
+@use "layout/containers";
+@use "layout/panels";
+@use "layout/post-content";
+@use "layout/sidebars";
 
 // Components
 //
@@ -54,30 +57,30 @@
 // class names specified in the component. Also known as design 'modules'.
 //
 // Style guide: components
-@import "components/blocks/call-to-action/call-to-action";
-@import "components/blocks/hero/hero";
-@import "components/blocks/tabs/tabs";
-@import "components/blocks/aside_blocks";
-@import "components/blocks/banner-block";
-@import "components/blocks/basic-block";
-@import "components/navigation/main-menu";
-@import "components/navigation/pagers";
-@import "components/navigation/user-menu";
-@import "components/regions/branding";
-@import "components/regions/content";
-@import "components/regions/footer";
-@import "components/regions/footer-menu";
-@import "components/regions/header";
-@import "components/regions/pre-content";
-@import "components/views/announcements";
-@import "components/views/attendees";
-@import "components/views/schedule";
-@import "components/views/sessions";
-@import "components/views/sponsors";
-@import "components/views/taxonomy";
-@import "components/views/badges";
-@import "components/breadcrumb";
-@import "components/messages";
-@import "components/session-form";
-@import "components/user-profile";
+@use "components/blocks/call-to-action/call-to-action";
+@use "components/blocks/hero/hero";
+@use "components/blocks/tabs/tabs";
+@use "components/blocks/aside_blocks";
+@use "components/blocks/banner-block";
+@use "components/blocks/basic-block";
+@use "components/navigation/main-menu";
+@use "components/navigation/pagers";
+@use "components/navigation/user-menu";
+@use "components/regions/branding";
+@use "components/regions/content";
+@use "components/regions/footer";
+@use "components/regions/footer-menu";
+@use "components/regions/header";
+@use "components/regions/pre-content";
+@use "components/views/announcements";
+@use "components/views/attendees";
+@use "components/views/schedule";
+@use "components/views/sessions";
+@use "components/views/sponsors";
+@use "components/views/taxonomy";
+@use "components/views/badges";
+@use "components/breadcrumb";
+@use "components/messages";
+@use "components/session-form";
+@use "components/user-profile";
 

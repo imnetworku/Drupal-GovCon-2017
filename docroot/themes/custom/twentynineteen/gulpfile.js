@@ -1,58 +1,59 @@
-let gulp = require('gulp'),
-  sass = require('gulp-sass')(require('node-sass'));
-  sourcemaps = require('gulp-sourcemaps'),
-  cleanCss = require('gulp-clean-css'),
-  rename = require('gulp-rename'),
-  postcss = require('gulp-postcss'),
-  gulpStylelint = require('gulp-stylelint'),
-  autoprefixer = require('autoprefixer'),
-  babel = require('gulp-babel'),
-  minify = require('gulp-minify');
+var gulp = require('gulp');
+var sass = require('gulp-sass')(require('sass'));
+var babel = require('gulp-babel');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var rename = require('gulp-rename');
+var autoprefixer = require('autoprefixer');
+var postcss = require('gulp-postcss');
+var cleanCSS = require('gulp-clean-css');
 
-const paths = {
-  scss: {
+var paths = {
+  styles: {
     src: './scss/*',
-    dest: './css',
+    dest: './css'
   },
-  js: {
+  scripts: {
     src: './js/modules/*',
     dest: './js/dist'
   },
   images: 'img/',
   styleGuide: 'styleguide'
-}
+};
 
-// Compile sass into CSS & auto-inject into browsers
-function styles () {
-  return gulp.src([paths.scss.src])
-    .pipe(sourcemaps.init())
+/*
+ * Define our tasks using plain functions
+ */
+function styles() {
+  return gulp.src(paths.styles.src)
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([autoprefixer({})]))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest(paths.scss.dest))
-    .pipe(cleanCss())
+    .pipe(cleanCSS())
+    // pass in options to the stream
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest(paths.scss.dest));
-   // .pipe(gulpStylelint({
-   //   reporters: [
-   //     {formatter: 'string', console: true}
-   // ]
-   //}));
+    .pipe(gulp.dest(paths.styles.dest));
 }
 
-// Move the javascript files into our js folder
-function js () {
-  return gulp.src([paths.js.src])
-    .pipe(babel({
-      presets: ['@babel/env']
-    }))
-    .pipe(minify({noSource: true}))
-    .pipe(gulp.dest(paths.js.dest))
+function scripts() {
+  return gulp.src(paths.scripts.src, { sourcemaps: true })
+    .pipe(babel())
+    .pipe(uglify())
+    .pipe(concat('drupal-navigation-min.js'))
+    .pipe(gulp.dest(paths.scripts.dest));
 }
 
-const build = gulp.series(styles, js)
+/*
+ * Specify if tasks run in series or parallel using `gulp.series` and `gulp.parallel`
+ */
+var build = gulp.parallel(styles, scripts);
 
-exports.styles = styles
-exports.js = js
-
-exports.default = build
+/*
+ * You can use CommonJS `exports` module notation to declare tasks
+ */
+exports.styles = styles;
+exports.scripts = scripts;
+exports.build = build;
+/*
+ * Define default task that can be called by just running `gulp` from cli
+ */
+exports.default = build;

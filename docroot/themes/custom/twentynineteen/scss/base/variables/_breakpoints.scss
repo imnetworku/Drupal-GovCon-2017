@@ -1,3 +1,5 @@
+@use '../node_modules/breakpoint-sass/stylesheets/breakpoint';
+
 // Breakpoints & MQ's ///////////////
 $screen: "only screen" !default;
 $xsmall-max: 500px !default;

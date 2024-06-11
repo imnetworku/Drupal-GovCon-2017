@@ -1,3 +1,5 @@
+@use "variables/colors";
+
 // Extendable classes
 %no-ul-list,
 .no-ul-list {
@@ -14,14 +16,14 @@
 
 %tmp-shadow,
 .tmp-shadow {
-  box-shadow: 0 0 2px 0 rgba($med-gray, 1);
+  box-shadow: 0 0 2px 0 rgba(colors.$med-gray, 1);
 }
 
 .blocked-style {
-  border: 1px solid $white;
+  border: 1px solid colors.$white;
   padding: 12px;
   border-radius: 5px;
-  background: $off-white;
+  background: colors.$off-white;
 
   @extend %tmp-shadow;
 }

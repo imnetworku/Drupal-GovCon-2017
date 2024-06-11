@@ -1,3 +1,5 @@
+@use "../../../base/variables/colors";
+
 // Line break
 //
 // Markup: <hr />
@@ -5,7 +7,7 @@
 // Style guide: atoms.hr
 
 hr {
-  color: $primary-darkest;
+  color: colors.$primary-darkest;
   border-width: 2pt;
   border-style: solid;
   margin: 2em 0;
