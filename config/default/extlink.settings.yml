@@ -1,3 +1,4 @@
+langcode: en
 extlink_exclude_admin_routes: false
 extlink_target: false
 extlink_target_no_override: false

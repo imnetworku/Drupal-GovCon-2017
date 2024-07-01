@@ -8,3 +8,4 @@ name: 'Sponsorship Level'
 vid: sponsorship_level
 description: 'Terms describing the different levels of sponsorship.'
 weight: 0
+new_revision: false

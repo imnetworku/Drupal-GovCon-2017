@@ -1264,7 +1264,7 @@ display:
       menu:
         type: normal
         title: Sponsors
-        description: '2020'
+        description: ''
         weight: -43
         enabled: false
         expanded: false
@@ -2110,7 +2110,7 @@ display:
       menu:
         type: normal
         title: Sponsors
-        description: '2023'
+        description: ''
         weight: -43
         enabled: false
         expanded: false

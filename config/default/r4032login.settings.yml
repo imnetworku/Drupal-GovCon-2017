@@ -1,10 +1,11 @@
 _core:
   default_config_hash: 0f9QAstx6Dyy5Z49L0a6pO8MlIl1SNBalUWB9lGnzj8
+langcode: en
 display_denied_message: true
 access_denied_message: 'Please login to view this page.'
 access_denied_message_type: error
 redirect_authenticated_users_to: ''
+throw_authenticated_404: false
 user_login_path: /user/login
 default_redirect_code: 302
 match_noredirect_pages: ''
-throw_authenticated_404: false

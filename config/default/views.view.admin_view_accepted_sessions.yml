@@ -16,27 +16,6 @@ dependencies:
     - taxonomy.vocabulary.rooms
     - taxonomy.vocabulary.session_track
     - user.role.administrator
-  content:
-    - 'taxonomy_term:conference_year:b841e242-eb84-4bf9-b245-4c809e3737bd'
-    - 'taxonomy_term:rooms:0455db5b-93e9-41f6-b260-8de3d40462d1'
-    - 'taxonomy_term:rooms:0dcc0b4c-fb92-4bd9-8c9c-2c105730c2e1'
-    - 'taxonomy_term:rooms:1d1143b4-6860-4f75-987c-c695328c2077'
-    - 'taxonomy_term:rooms:2edcc68c-6b30-4feb-9b00-a3cbd09ea442'
-    - 'taxonomy_term:rooms:2ef74ed3-ccdd-4ee6-b78b-2f773af60e25'
-    - 'taxonomy_term:rooms:382ebcab-3d13-4815-acd1-d49dbe269d11'
-    - 'taxonomy_term:rooms:3ffca9a0-6bb3-4324-a3a8-4819ac9035ea'
-    - 'taxonomy_term:rooms:a289dd6d-0375-4bdc-a653-4c266f07a0f9'
-    - 'taxonomy_term:rooms:aaf8e74f-ea88-4dfa-a937-87e62725119c'
-    - 'taxonomy_term:rooms:ab8e53fd-8164-46c9-a486-db357d5ac9c6'
-    - 'taxonomy_term:rooms:add3de58-60f2-4c37-a917-f175d0655cd0'
-    - 'taxonomy_term:rooms:dd9b54d1-becb-4ff8-a9ff-1cfff84d170b'
-    - 'taxonomy_term:rooms:ea0075b0-ade9-4cd4-9fdd-67c3f29b0ff3'
-    - 'taxonomy_term:rooms:eacf8d82-4231-4e4f-bd78-cb894a865e77'
-    - 'taxonomy_term:session_track:0a204882-2395-405d-bc08-3d2e402400da'
-    - 'taxonomy_term:session_track:18795e61-ba7c-451c-912e-6ef6835cf562'
-    - 'taxonomy_term:session_track:823a0160-1ea6-4f10-90f4-06b2af4eb31c'
-    - 'taxonomy_term:session_track:d69a8325-bc1a-4577-8991-65f240455bb8'
-    - 'taxonomy_term:session_track:d7334075-7a5b-4ddd-a933-3621a8d0ece2'
   module:
     - capitalcamp_glue
     - datetime
@@ -747,6 +726,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:

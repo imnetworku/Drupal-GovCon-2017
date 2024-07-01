@@ -11,7 +11,7 @@ third_party_settings:
 name: Event
 type: event
 description: 'This is used to display non-session events at the conference.'
-help: ''
+help: null
 new_revision: true
 preview_mode: 0
 display_submitted: false

@@ -6,3 +6,4 @@ name: 'Session Track'
 vid: session_track
 description: 'Different types of sessions. '
 weight: 0
+new_revision: false

@@ -5,8 +5,6 @@ dependencies:
   config:
     - taxonomy.vocabulary.conference_year
     - taxonomy.vocabulary.session_track
-  content:
-    - 'taxonomy_term:conference_year:b841e242-eb84-4bf9-b245-4c809e3737bd'
   module:
     - taxonomy
     - user
@@ -91,6 +89,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:

@@ -6,3 +6,4 @@ name: 'Conference Role'
 vid: conference_role
 description: 'Roles served by GovCon community members.'
 weight: 0
+new_revision: false

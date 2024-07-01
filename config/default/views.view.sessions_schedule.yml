@@ -17,14 +17,6 @@ dependencies:
     - taxonomy.vocabulary.conference_year
     - taxonomy.vocabulary.session_track
     - user.role.authenticated
-  content:
-    - 'taxonomy_term:conference_year:b841e242-eb84-4bf9-b245-4c809e3737bd'
-    - 'taxonomy_term:session_track:0a204882-2395-405d-bc08-3d2e402400da'
-    - 'taxonomy_term:session_track:18795e61-ba7c-451c-912e-6ef6835cf562'
-    - 'taxonomy_term:session_track:823a0160-1ea6-4f10-90f4-06b2af4eb31c'
-    - 'taxonomy_term:session_track:ac4813be-e88a-4bc5-b4d7-230924fa4d7e'
-    - 'taxonomy_term:session_track:d69a8325-bc1a-4577-8991-65f240455bb8'
-    - 'taxonomy_term:session_track:d7334075-7a5b-4ddd-a933-3621a8d0ece2'
   module:
     - better_exposed_filters
     - capitalcamp_glue
@@ -1349,6 +1341,7 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
+          pagination_heading_level: h4
       empty:
         area:
           id: area
@@ -2564,7 +2557,7 @@ display:
           admin_label: ''
           entity_type: flagging
           entity_field: uid
-          plugin_id: numeric
+          plugin_id: entity_target_id
           default_action: default
           exception:
             value: all
@@ -2590,6 +2583,7 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
+          target_entity_type_id: user
       filters:
         status:
           id: status
