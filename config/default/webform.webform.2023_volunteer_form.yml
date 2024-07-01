@@ -9,7 +9,7 @@ uid: 11
 template: false
 archive: false
 id: 2023_volunteer_form
-title: '2023 Volunteer Form'
+title: 'Volunteer Form'
 description: ''
 categories: {  }
 elements: |-
@@ -79,7 +79,7 @@ settings:
   form_title: source_entity_webform
   form_submit_once: false
   form_open_message: ''
-  form_close_message: 'This form is currently closed.&nbsp;Please visit the <a href="/volunteer">volunteer</a> page where you will find the <a href="https://docs.google.com/spreadsheets/d/1T9yKB8T_hQhKZd6sbPuh1iPsE_echorR5O076rfyU8s/edit?usp=sharing">volunteer schedule spreadsheet</a> to sign up for volunteer timeslots during the conference.'
+  form_close_message: '<p>This form is currently closed.&nbsp;Please visit the <a href="/volunteer">volunteer</a> page where you will find the <a href="https://docs.google.com/spreadsheets/d/1T9yKB8T_hQhKZd6sbPuh1iPsE_echorR5O076rfyU8s/edit?usp=sharing">volunteer schedule spreadsheet</a> to sign up for volunteer timeslots during the conference.</p>'
   form_exception_message: ''
   form_previous_submissions: true
   form_confidential: false
@@ -277,7 +277,7 @@ handlers:
       sender_mail: ''
       sender_name: ''
       subject: 'Thank you for volunteering for Drupal GovCon 2023'
-      body: '<p>Thank you for volunteering. Our volunteer coordinators will be in touch with more specific instructions as we get closer to the event.</p><p>If you haven''t already, please:</p><ul><li>Make sure you are <a href="https://www.drupalgovcon.org/register">registered for 2023 Drupal GovCon</a>.</li><li>Join the <a href="https://drupal.slack.com" data-extlink="">Drupal slack workspace</a> and the <a href="https://drupal.slack.com/archives/C02EN4KGQFK">drupal-govcon slack channel</a>.</li></ul><p>Submitted on [webform_submission:created]</p><p>Submitted by: [webform_submission:user]</p><p>Submitted values are:</p><p>[webform_submission:values]</p>'
+      body: '<p>Thank you for volunteering. Our volunteer coordinators will be in touch with more specific instructions as we get closer to the event.</p><p>Submitted on [webform_submission:created]</p><p>Submitted by: [webform_submission:user]</p><p>Submitted values are:</p><p>[webform_submission:values]</p>'
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true

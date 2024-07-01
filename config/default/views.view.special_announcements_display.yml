@@ -9,6 +9,7 @@ dependencies:
     - node.type.special_announcement
     - taxonomy.vocabulary.conference_year
   content:
+    - 'taxonomy_term:conference_year:21ce907f-78ea-42e9-af7a-8b552d5c8f7a'
     - 'taxonomy_term:conference_year:6c70bf77-c283-4313-a529-fc476232523f'
     - 'taxonomy_term:conference_year:a3b3e4e7-5b6a-4d61-b99a-674262910622'
   module:
@@ -941,7 +942,7 @@ display:
           plugin_id: taxonomy_index_tid
           operator: or
           value:
-            406: 406
+            451: 451
           group: 1
           exposed: false
           expose:

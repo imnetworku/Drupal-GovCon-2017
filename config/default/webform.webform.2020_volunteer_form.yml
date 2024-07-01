@@ -1,6 +1,6 @@
 uuid: 35ad7f0f-39f0-462b-ae43-324c8ca1daee
 langcode: en
-status: open
+status: closed
 dependencies: {  }
 weight: 0
 open: null
@@ -73,7 +73,7 @@ settings:
   form_title: source_entity_webform
   form_submit_once: false
   form_open_message: ''
-  form_close_message: 'This form is currently closed.&nbsp;Please visit the <a href="/volunteer">volunteer</a> page where you will find the <a href="https://docs.google.com/spreadsheets/d/1T9yKB8T_hQhKZd6sbPuh1iPsE_echorR5O076rfyU8s/edit?usp=sharing">volunteer schedule spreadsheet</a> to sign up for volunteer timeslots during the conference.'
+  form_close_message: '<p>This form is currently closed.&nbsp;Please visit the <a href="/volunteer">volunteer</a> page where you will find the <a href="https://docs.google.com/spreadsheets/d/1T9yKB8T_hQhKZd6sbPuh1iPsE_echorR5O076rfyU8s/edit?usp=sharing">volunteer schedule spreadsheet</a> to sign up for volunteer timeslots during the conference.</p>'
   form_exception_message: ''
   form_previous_submissions: true
   form_confidential: false

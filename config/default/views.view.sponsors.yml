@@ -10,7 +10,7 @@ dependencies:
     - taxonomy.vocabulary.conference_year
     - taxonomy.vocabulary.sponsorship_level
   content:
-    - 'taxonomy_term:conference_year:6c70bf77-c283-4313-a529-fc476232523f'
+    - 'taxonomy_term:conference_year:21ce907f-78ea-42e9-af7a-8b552d5c8f7a'
     - 'taxonomy_term:sponsorship_level:7d513731-0643-4b01-988b-32a31f02844e'
   module:
     - link
@@ -483,7 +483,7 @@ display:
           plugin_id: taxonomy_index_tid
           operator: or
           value:
-            406: 406
+            451: 451
           group: 1
           exposed: false
           expose:

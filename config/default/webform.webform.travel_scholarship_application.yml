@@ -1,6 +1,6 @@
 uuid: 4a4e2ea2-75cf-4db8-a739-9eb304096a26
 langcode: en
-status: open
+status: closed
 dependencies: {  }
 weight: 0
 open: null
@@ -124,7 +124,7 @@ elements: |-
     shared_hotel:
       '#type': webform_message
       '#message_type': warning
-      '#message_message': 'Hotel accomodations will be a shared room of 3 people. You may choose your own hotel / room, but will only be reimbursed for 1/3 of the hotel costs.'
+      '#message_message': '<p>Hotel accommodations will be a shared room of 2 people. You may choose your own hotel / room, but will only be reimbursed for up to 1/2 of the negotiated conference hotel rate or half your room rate, whichever is less.</p>'
 css: ''
 javascript: ''
 settings:
