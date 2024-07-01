@@ -6,3 +6,4 @@ name: 'Conference Year'
 vid: conference_year
 description: 'The year of the conference.'
 weight: 0
+new_revision: false

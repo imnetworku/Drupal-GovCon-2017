@@ -1,6 +1,6 @@
 uuid: 0ca23c84-5487-4f92-b538-fddf357a05d7
 langcode: en
-status: scheduled
+status: closed
 dependencies:
   module:
     - antibot
@@ -8,8 +8,8 @@ third_party_settings:
   antibot:
     antibot: true
 weight: 0
-open: '2023-10-22T08:00:00'
-close: '2023-10-27T18:00:00'
+open: null
+close: null
 uid: 11
 template: false
 archive: false
@@ -367,8 +367,8 @@ settings:
   ajax_progress_type: ''
   ajax_effect: ''
   ajax_speed: null
-  page: true
-  page_submit_path: /register
+  page: false
+  page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
   form_title: source_entity_webform

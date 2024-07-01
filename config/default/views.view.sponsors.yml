@@ -9,9 +9,6 @@ dependencies:
     - node.type.sponsor
     - taxonomy.vocabulary.conference_year
     - taxonomy.vocabulary.sponsorship_level
-  content:
-    - 'taxonomy_term:conference_year:21ce907f-78ea-42e9-af7a-8b552d5c8f7a'
-    - 'taxonomy_term:sponsorship_level:7d513731-0643-4b01-988b-32a31f02844e'
   module:
     - link
     - node
@@ -281,7 +278,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: numeric
+          plugin_id: entity_target_id
           default_action: default
           exception:
             value: all
@@ -312,6 +309,7 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
+          target_entity_type_id: taxonomy_term
         field_conference_year_target_id:
           id: field_conference_year_target_id
           table: node__field_conference_year
@@ -319,7 +317,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: numeric
+          plugin_id: entity_target_id
           default_action: ignore
           exception:
             value: all
@@ -346,6 +344,7 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
+          target_entity_type_id: taxonomy_term
       filters:
         status:
           id: status
@@ -483,7 +482,7 @@ display:
           plugin_id: taxonomy_index_tid
           operator: or
           value:
-            451: 451
+            406: 406
           group: 1
           exposed: false
           expose:
