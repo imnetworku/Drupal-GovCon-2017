@@ -25,7 +25,7 @@ elements: |-
         ':input[name="ticket_status"]':
           value: Ticket
     '#display_on': both
-    '#message_message': 'Congratulations - you have a ticket to GovCon 2023! We can&#39;t wait to see you.'
+    '#message_message': 'Congratulations - you have a ticket to GovCon 2024! We can&#39;t wait to see you.'
   waitlist_ticket:
     '#type': webform_message
     '#states':
@@ -36,7 +36,7 @@ elements: |-
           checked: true
     '#display_on': both
     '#message_type': error
-    '#message_message': 'You are on the waitlist and have NOT been issued a ticket to GovCon. Please do not show up at the conference - we will not have the space. If we are over capacity, we run the risk of having the entire event shut down by the fire marshall.'
+    '#message_message': ''
   markup_01:
     '#type': webform_markup
     '#access': false
@@ -370,7 +370,7 @@ elements: |-
     '#options':
       Ticket: Ticket
       Waitlist: Waitlist
-    '#default_value': Waitlist
+    '#default_value': Ticket
     '#access_create_roles':
       - administrator
     '#access_update_roles':
@@ -395,7 +395,7 @@ settings:
   form_title: source_entity_webform
   form_submit_once: false
   form_open_message: ''
-  form_close_message: '<p>Thank you for your interest in Drupal GovCon.&nbsp; Our registration and wait list are full.</p>'
+  form_close_message: ''
   form_exception_message: ''
   form_previous_submissions: true
   form_confidential: false
@@ -486,8 +486,8 @@ settings:
   draft_pending_multiple_message: ''
   confirmation_type: page
   confirmation_url: user
-  confirmation_title: "You're Registered - But on Our Waitlist!"
-  confirmation_message: "<p>Thank you for your interest in Drupal GovCon 2023. Unfortunately, we are at capacity.</p><p>If space becomes available, your ticket be moved off the waitlist and you'll receive an email confirmation.&nbsp;</p>"
+  confirmation_title: 'Thank you for registering for Drupal GovCon 2024! '
+  confirmation_message: '<p>We’re thrilled to have you join us for this exciting event, taking place from August 13-15, 2024, at the <a href="https://riggs.umd.edu/">Riggs Center, University of Maryland</a>. &nbsp; Stay tuned for more updates and detailed schedules. In the meantime, feel free to follow us on <a href="https://www.linkedin.com/company/drupal4gov/mycompany/">LinkedIn</a> for the latest news. If you have any questions, don’t hesitate to reach out to us at <a href="mailto:info@drupal4gov.us">info@drupal4gov.us</a>.&nbsp;</p><p>See you at Drupal GovCon 2024!</p>'
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -495,7 +495,7 @@ settings:
   confirmation_exclude_query: false
   confirmation_exclude_token: false
   confirmation_update: false
-  limit_total: 650
+  limit_total: 1000
   limit_total_interval: null
   limit_total_message: ''
   limit_total_unique: false
@@ -598,27 +598,8 @@ handlers:
       return_path: ''
       sender_mail: ''
       sender_name: ''
-      subject: 'Thank you for registering for Drupal GovCon 2023'
-      body: |-
-        Thank you for registering for Drupal GovCon 2023.
-
-        Thanks to our awesome sponsors, we are able to provide complimentary lunch. Attendees who registered by October 13th will be given preference in line at lunch. Once all confirmed attendees have received a lunch, other attendees will be able to enjoy any remaining lunches we may have available. Don’t fear though, the nearby Bethesda area has many dining options to choose from.
-
-        Keep an eye on your email - as we get closer to the event, we will require attendees to confirm their registration so that we have an accurate count for the caterers.
-
-        Interested in Training?
-        Yes? Awesome! You'll need the training code DGCTRAIN2023 to register for any of the training classes. While you must be registered for Drupal GovCon to attend training, you must register separately for the training course you wish to attend.
-
-        If you have questions, please contact us at drupalgovcontraining@gmail.com.
-
-        Change your mind about getting email alerts? Subscribe to our e-mail list:
-        http://eepurl.com/bbJASn
-
-        Follow us on social media:
-        https://twitter.com/drupalgovcon
-        https://facebook.com/DrupalGovCon
-
-        - Drupal GovCon team
+      subject: 'Thank you for registering for Drupal GovCon 2024'
+      body: "Thank you for registering for Drupal GovCon 2024.\r\n\r\nThanks to our awesome sponsors, we are able to provide complimentary lunch. Attendees who registered by July 26th will be given preference in line at lunch. Once all confirmed attendees have received a lunch, other attendees will be able to enjoy any remaining lunches we may have available. \r\n\r\nKeep an eye on your email - as we get closer to the event, we will require attendees to confirm their registration so that we have an accurate count for the caterers.\r\n\r\nSubscribe to our e-mail list:\r\nhttp://eepurl.com/bbJASn\r\n\r\n- Drupal GovCon team"
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
@@ -657,20 +638,8 @@ handlers:
       return_path: ''
       sender_mail: ''
       sender_name: ''
-      subject: 'Thank you for registering for Drupal GovCon 2023'
-      body: |-
-        Thank you for registering for Drupal GovCon 2023. You are on our waitlist. Should a spot open up, you will receive an email confirmation letting you know that you've been moved off the waitlist.
-
-        If you have questions, please contact us at drupal4gov@gmail.com.
-
-        Change your mind about getting email alerts? Subscribe to our e-mail list:
-        http://eepurl.com/bbJASn
-
-        Follow us on social media:
-        https://twitter.com/drupalgovcon
-        https://facebook.com/DrupalGovCon
-
-        - Drupal GovCon team
+      subject: 'Thank you for registering for Drupal GovCon 2024'
+      body: "Thank you for registering for Drupal GovCon 2024. You are on our waitlist. Should a spot open up, you will receive an email confirmation letting you know that you've been moved off the waitlist.\r\n\r\nIf you have questions, please contact us at info@drupal4gov.us.\r\n\r\nSubscribe to our e-mail list:\r\nhttp://eepurl.com/bbJASn\r\n\r\nFollow us on social media:\r\nhttps://www.linkedin.com/company/drupal4gov\r\n\r\n- Drupal GovCon team"
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
@@ -710,7 +679,7 @@ handlers:
       sender_mail: ''
       sender_name: ''
       subject: "Congratulations - you're off the Drupal GovCon Waitlist"
-      body: "<p>Congratulations!&nbsp;</p><p>You've been moved off the waitlist and have a ticket to Drupal GovCon 2023!</p><p>Tickets issued after October 13th are not guaranteed a lunch or T-shirt. We'll do our best to feed everyone, but you may need to grab lunch at one of the local eateries.</p><p><strong>Interested in Training?</strong><br>Yes? Awesome! You'll need the training code <strong>DGCTRAIN2023</strong> to register for any of the training classes. While you must be registered for Drupal GovCon to attend training, you must register separately for the training course you wish to attend.</p><p>If you have questions, please contact us at drupalgovcontraining@gmail.com.</p><p>Change your mind about getting email alerts? Subscribe to our e-mail list:<br>http://eepurl.com/bbJASn</p><p>Follow us on social media:<br>https://twitter.com/drupalgovcon<br>https://facebook.com/DrupalGovCon</p><p>- Drupal GovCon team</p><p>&nbsp;</p><p>Submitted on [webform_submission:created]</p><p>Submitted by: [webform_submission:user]</p><p>Submitted values are:</p><p>[webform_submission:values]</p>"
+      body: "<p>Congratulations!&nbsp;</p><p>You've been moved off the waitlist and have a ticket to Drupal GovCon 2024!</p><p>Tickets issued after July 26th are not guaranteed a lunch or T-shirt. We'll do our best to feed everyone, but you may need to grab lunch at one of the local eateries.</p><p>If you have questions, please contact us at info@drupal4gov.us.</p><p>Subscribe to our e-mail list:<br>http://eepurl.com/bbJASn</p><p>Follow us on social media:<br>https://www.linkedin.com/company/drupal4gov</p><p>- Drupal GovCon team</p><p>&nbsp;</p><p>Submitted on [webform_submission:created]</p><p>Submitted by: [webform_submission:user]</p><p>Submitted values are:</p><p>[webform_submission:values]</p>"
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
