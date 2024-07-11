@@ -1,5 +1,6 @@
 @use "variables/colors";
 @use "variables/fonts";
+@use "variables/breakpoints" as *;
 
 // Base HTML Elements.
 html,
@@ -37,4 +38,23 @@ svg.ext {
 
 .filter-wrapper {
   border: none;
+}
+
+// Add pading on left and right side image
+.content {
+  .field--name-body {
+    .align-right img,
+    .align-left img {
+      padding: 0 0 16px;
+    }
+
+    @include breakpoint($xsmall-max) {
+      .align-left img {
+        padding-right: 16px;
+      }
+      .align-right img {
+        padding-left: 16px;
+      }
+    }
+  }
 }
