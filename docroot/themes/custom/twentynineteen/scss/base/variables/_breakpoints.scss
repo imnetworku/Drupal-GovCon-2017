@@ -1,4 +1,4 @@
-@use '../node_modules/breakpoint-sass/stylesheets/breakpoint';
+@forward '../node_modules/breakpoint-sass/stylesheets/breakpoint';
 
 // Breakpoints & MQ's ///////////////
 $screen: "only screen" !default;
