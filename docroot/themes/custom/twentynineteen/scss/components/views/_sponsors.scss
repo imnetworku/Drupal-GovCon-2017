@@ -25,7 +25,17 @@
   padding: 1.5em 0 2em;
   margin: 0;
   text-align: center;
-  display: block;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+
+  @include breakpoint($xsmall-max) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoint($small-max) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
   h2 {
     margin-top: 40px;
@@ -38,25 +48,28 @@
 }
 
 .sponsor {
-  width: 50%;
-  vertical-align: middle;
-  padding: 30px 10px;
-  margin: 0 auto;
-  box-sizing: border-box;
-  display: inline-block;
+  position: relative;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0px 2px 4px 0 rgba(0, 0, 0, 0.1);
 
-  @include breakpoint($small-max) {
-    width: 25%;
-    padding: 0 10px;
-    margin: 0;
+  a::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
   }
 
   img {
-    width: 100% !important;
-    height: 100% !important;
+    object-fit: contain;
+    height: 140px;
   }
 
-  img:hover {
+  a:hover img {
     opacity: 0.5; // Hover effect for logos
   }
 }
