@@ -4,7 +4,7 @@
 $screen: "only screen" !default;
 $xsmall-max: 500px !default;
 $small-max: 767px !default;
-$medium-max: 1023px !default;
+$medium-max: 1024px !default;
 $x-small: $screen max-width $xsmall-max;
 $small: $screen max-width $small-max;
 $up-sm: $screen $small-max + 1;

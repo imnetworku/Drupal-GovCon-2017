@@ -5,7 +5,7 @@ features:
   favicon: 1
 logo:
   use_default: 0
-  path: profiles/contrib/lightning/lightning.png
+  path: 'public://Gov-Con-Logo.png'
 favicon:
   use_default: 0
   path: themes/custom/twentynineteen/favicon.ico
