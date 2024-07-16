@@ -12,9 +12,15 @@
   Drupal.behaviors.navgiation = {
     attach: (context, settings) => {
       const topMenuLinks = context.querySelectorAll('.menu-main__item > a');
-      const subMenu = context.querySelectorAll('.menu-submenu');
+      const subMenu = context.querySelector('.menu-submenu');
+      var siteBranding = document.querySelector('.region-branding');
+      var coreSponsor = siteBranding.querySelector('.block-views-blockcore-sponsors-listing-sponsors');
+      var mobileMenu = document.querySelector('.mm-menu--offcanvas .mm-panels .mm-panel .mm-listview');
+      if (coreSponsor && mobileMenu) {
+        var coreSponsorClone = coreSponsor.cloneNode(true);
+          mobileMenu.appendChild(coreSponsorClone);
+      }
     }
   }
-
 
 })(Drupal, drupalSettings);

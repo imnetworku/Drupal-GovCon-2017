@@ -1,5 +1,4 @@
-@use "../../base/variables/colors";
-
+@use "../../base" as *;
 //
 // Header
 //
@@ -11,7 +10,59 @@
 }
 
 .region-header {
-  position: relative;
-  background: colors.$primary-darkest;
-  min-height: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  .block-responsive-menu-horizontal-menu {
+    display: none;
+  }
+
+  @include breakpoint($medium-max) {
+    display: unset;
+    position: relative;
+    min-height: 35px;
+    background: $primary-darkest;
+
+    .block-responsive-menu-horizontal-menu {
+      display: block;
+    }
+  }
+}
+
+#header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: $white;
+    @include breakpoint($medium-max) {
+    top: 120px;
+
+    .site-branding {
+      display: none;
+    }
+  }
+}
+
+.mm-panels {
+  .view-core-sponsors-listing {
+    .view-content {
+      padding: 14px 20px;
+    }
+  }
+}
+.view-core-sponsors-listing {
+  .view-content {
+    display: flex;
+    column-gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    .views-field-field-sponsor-logo {
+      img {
+        width: auto;
+        height: 30px;
+      }
+    }
+  }
 }

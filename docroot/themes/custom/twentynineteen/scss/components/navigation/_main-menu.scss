@@ -38,10 +38,17 @@
 header {
   .responsive-menu-toggle {
     display: block;
-  }
 
-  .responsive-menu-toggle span.label {
-    top: 5px;
+    .responsive-menu-toggle-icon:before, 
+    .responsive-menu-toggle-icon:after, 
+    .responsive-menu-toggle-icon span.icon {
+      background: $primary-darkest;
+    }
+
+    span.label {
+      top: 5px;
+      color: $primary-darkest;
+    }
   }
 
   .responsive-menu-block-wrapper {
@@ -49,24 +56,8 @@ header {
   }
 
   .horizontal-menu {
-    background: $primary-darkest;
     display: flex;
-    list-style: none;
-    justify-content: space-evenly;
-    flex-direction: column;
-    width: 100%;
-    min-height: 60px;
-    margin: 0 auto;
-    padding: 0;
-
-    @include breakpoint($small-max) {
-      margin-top: 0;
-      min-height: auto;
-      overflow-x: visible;
-      flex-direction: row;
-      width: 50%;
-      padding-top: 0;
-    }
+    justify-content: center;
 
     li a {
       background: $primary-darkest;

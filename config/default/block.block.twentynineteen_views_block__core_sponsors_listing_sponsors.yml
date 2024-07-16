@@ -1,0 +1,24 @@
+uuid: fce42f14-6776-40c9-ad1b-94274238d337
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.core_sponsors_listing
+  module:
+    - views
+  theme:
+    - twentynineteen
+id: twentynineteen_views_block__core_sponsors_listing_sponsors
+theme: twentynineteen
+region: branding
+weight: 0
+provider: null
+plugin: 'views_block:core_sponsors_listing-sponsors'
+settings:
+  id: 'views_block:core_sponsors_listing-sponsors'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }
