@@ -24,8 +24,8 @@ elements: |-
       visible:
         ':input[name="ticket_status"]':
           value: Ticket
-    '#display_on': both
-    '#message_message': 'Congratulations - you have a ticket to GovCon 2024! We can&#39;t wait to see you.'
+    '#display_on': view
+    '#message_message': "<p>Congratulations - you have a ticket to GovCon 2024! We can't wait to see you.</p>"
   waitlist_ticket:
     '#type': webform_message
     '#states':
@@ -71,7 +71,7 @@ elements: |-
       '#title': 'Drupal.org User Name'
     twitter_handle:
       '#type': textfield
-      '#title': 'X (Twitter) Handle'
+      '#title': LinkedIn
     address:
       '#type': webform_address
       '#title': City/State/Country
@@ -242,7 +242,8 @@ elements: |-
         'Digital Asset or Document Management Tools': 'Digital Asset or Document Management Tools'
         'Dev Ops Tools': 'Dev Ops Tools'
         'E-Commerce Tools': 'E-Commerce Tools'
-        'Hosting; Marketing Software': 'Hosting; Marketing Software'
+        Hosting: Hosting
+        'Marketing Software': 'Marketing Software'
         'Project Management Software': 'Project Management Software'
       '#select2': true
       '#other__option_label': Other
@@ -281,7 +282,7 @@ elements: |-
       '#type': webform_markup
       '#access_create_roles':
         - administrator
-      '#markup': 'NOTE:</strong>&nbsp;Late registrations (after October 13th) are not guaranteed lunch during the conference.</p>'
+      '#markup': '<p>NOTE:&nbsp;Late registrations (after July 22nd) are not guaranteed lunch during the conference.</p><p>&nbsp;</p>'
     t_shirt_size:
       '#type': select
       '#title': 'T-Shirt Size'
@@ -599,7 +600,17 @@ handlers:
       sender_mail: ''
       sender_name: ''
       subject: 'Thank you for registering for Drupal GovCon 2024'
-      body: "Thank you for registering for Drupal GovCon 2024.\r\n\r\nThanks to our awesome sponsors, we are able to provide complimentary lunch. Attendees who registered by July 26th will be given preference in line at lunch. Once all confirmed attendees have received a lunch, other attendees will be able to enjoy any remaining lunches we may have available. \r\n\r\nKeep an eye on your email - as we get closer to the event, we will require attendees to confirm their registration so that we have an accurate count for the caterers.\r\n\r\nSubscribe to our e-mail list:\r\nhttp://eepurl.com/bbJASn\r\n\r\n- Drupal GovCon team"
+      body: |-
+        Thank you for registering for Drupal GovCon 2024.
+
+        Thanks to our awesome sponsors, we are able to provide complimentary lunch. Attendees who registered by July 26th will be given preference in line at lunch. Once all confirmed attendees have received a lunch, other attendees will be able to enjoy any remaining lunches we may have available. 
+
+        Keep an eye on your email - as we get closer to the event, we will require attendees to confirm their registration so that we have an accurate count for the caterers.
+
+        Subscribe to our e-mail list:
+        http://eepurl.com/bbJASn
+
+        - Drupal GovCon team
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
@@ -639,7 +650,18 @@ handlers:
       sender_mail: ''
       sender_name: ''
       subject: 'Thank you for registering for Drupal GovCon 2024'
-      body: "Thank you for registering for Drupal GovCon 2024. You are on our waitlist. Should a spot open up, you will receive an email confirmation letting you know that you've been moved off the waitlist.\r\n\r\nIf you have questions, please contact us at info@drupal4gov.us.\r\n\r\nSubscribe to our e-mail list:\r\nhttp://eepurl.com/bbJASn\r\n\r\nFollow us on social media:\r\nhttps://www.linkedin.com/company/drupal4gov\r\n\r\n- Drupal GovCon team"
+      body: |-
+        Thank you for registering for Drupal GovCon 2024. You are on our waitlist. Should a spot open up, you will receive an email confirmation letting you know that you've been moved off the waitlist.
+
+        If you have questions, please contact us at info@drupal4gov.us.
+
+        Subscribe to our e-mail list:
+        http://eepurl.com/bbJASn
+
+        Follow us on social media:
+        https://www.linkedin.com/company/drupal4gov
+
+        - Drupal GovCon team
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
