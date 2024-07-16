@@ -14,10 +14,6 @@ services:
       image: isholgueras/chrome-headless:latest
       # Lando always overrides the default entrypoint.
       command: chromedriver --verbose --whitelisted-ips=
-  nodeservice:
-    type: node:20.5.0
-    build:
-      - cd docroot/themes/custom/twentynineteen && npm install && npm run build
   appserver:
     xdebug: false
     config:
@@ -26,6 +22,8 @@ services:
       - apt-get update
       - apt-get install libxss1
       - echo "Run additional build commands here. Run lando rebuild after updating this file."
+      - curl -sL https://deb.nodesource.com/setup_20.x | bash -
+      - apt install -y nodejs
     overrides:
       # Pass SSH keys.
       volumes:
