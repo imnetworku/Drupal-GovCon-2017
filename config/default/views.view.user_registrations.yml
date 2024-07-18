@@ -8,6 +8,7 @@ dependencies:
     - webform.webform.2020_registration
     - webform.webform.2021_registration
     - webform.webform.2023_registration
+    - webform.webform.2024_registration
     - webform.webform.registration
   module:
     - user
@@ -382,7 +383,7 @@ display:
           plugin_id: text
           empty: true
           content:
-            value: "<p>Great! You've got an account, but need to grab a ticket in order to attend the event!</p>\r\n<p><a href=\"/register\" class=\"button\">Register for Drupal GovCon 2023</a></p>"
+            value: "<p>Great! You've got an account, but need to grab a ticket in order to attend the event!</p>\r\n<p><a href=\"/register\" class=\"button\">Register for Drupal GovCon 2024</a></p>"
             format: rich_text
           tokenize: false
       sorts:
@@ -462,6 +463,7 @@ display:
             2020_registration: 2020_registration
             2021_registration: 2021_registration
             2023_registration: 2023_registration
+            2024_registration: 2024_registration
           group: 1
           exposed: false
           expose:
@@ -588,7 +590,7 @@ display:
           plugin_id: text
           empty: false
           content:
-            value: "<p>Welcome back! We hope to see you at GovCon this year! If you don't see Registration for this year in the table below, you will need to register for a ticket for this year's event. You can also use this registration link to reserve another ticket for someone else.</p>\r\n<p><a href=\"/register\" class=\"button\">Register for Drupal GovCon 2023</a></p>"
+            value: "<p>Welcome back! We hope to see you at GovCon this year! If you don't see Registration for this year in the table below, you will need to register for a ticket for this year's event. You can also use this registration link to reserve another ticket for someone else.</p>\r\n<p><a href=\"/register\" class=\"button\">Register for Drupal GovCon 2024</a></p>"
             format: rich_text
           tokenize: false
       footer:
