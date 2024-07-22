@@ -248,7 +248,7 @@
         ],
         "post-install-cmd": [
             "PhantomInstaller\\Installer::installPhantomJS",
-            "cd docroot/themes/custom/twentynineteen;npm ci; npm run build"
+            "php .lando/npm-installer.php"
         ],
         "post-update-cmd": [
             "PhantomInstaller\\Installer::installPhantomJS"
