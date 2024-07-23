@@ -36,7 +36,6 @@
     z-index: 2;
     background-color: $white;
     @include breakpoint($medium-max) {
-    top: 120px;
 
     .site-branding {
       display: none;
