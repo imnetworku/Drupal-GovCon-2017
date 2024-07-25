@@ -83,7 +83,7 @@ input[type="password"],
 input[type="date"],
 textarea {
   font-family: inherit;
-  border: 1px solid colors.$med-gray;
+  border: 1px solid colors.$darker-gray;
   border-radius: 4px;
   color: colors.$darker-gray;
   display: block;
@@ -172,7 +172,7 @@ input[type="checkbox"]:disabled + label::before {
 
 select {
   background: colors.$white;
-  border: 1px solid colors.$med-gray;
+  border: 1px solid colors.$darker-gray;
   border-radius: 4px;
   color: colors.$darker-gray;
   text-transform: uppercase;
@@ -193,8 +193,15 @@ select {
   text-overflow: '';
 }
 
+.select2-container--default {
+  .select2-selection--single,
+  .select2-selection--multiple {
+    border: 1px solid colors.$darker-gray;
+  }
+}
+
 fieldset {
-  border: 1px solid colors.$med-gray;
+  border: 1px solid colors.$darker-gray;
   border-radius: 0;
   margin: 1em 0 2em;
 
@@ -298,7 +305,7 @@ input[type="time"],
 input[type="url"] {
   background-color: white;
   font-family: inherit;
-  border: 1px solid colors.$med-gray;
+  border: 1px solid colors.$darker-gray;
   color: colors.$blk;
   display: block;
   font-size: 0.875em;
