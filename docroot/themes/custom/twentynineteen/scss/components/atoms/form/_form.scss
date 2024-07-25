@@ -15,6 +15,10 @@ form .form-item {
   padding: 0.5em;
 }
 
+form .webform-select-other .form-item {
+  padding: 0;
+}
+
 .form-item {
   .field--label-inline .field__label {
     background: colors.$light-gold;
@@ -74,8 +78,8 @@ input[type="password"],
 input[type="date"],
 textarea {
   font-family: inherit;
-  border: 1px solid colors.$dark-gray;
-  border-radius: 0;
+  border: 1px solid colors.$med-gray;
+  border-radius: 4px;
   color: colors.$darker-gray;
   display: block;
   font-size: 1.1em;
@@ -172,8 +176,8 @@ input[type="checkbox"]:disabled + label::before {
 
 select {
   background: colors.$white;
-  border: 1px solid colors.$dark-gray;
-  border-radius: 0;
+  border: 1px solid colors.$med-gray;
+  border-radius: 4px;
   color: colors.$darker-gray;
   text-transform: uppercase;
   font-size: 1em;
@@ -182,7 +186,6 @@ select {
   margin: 0 0 1em;
   outline: none;
   width: 100%;
-  max-width: 500px;
   -webkit-appearance: none;
   -moz-appearance: none;
   padding: 0.5em;
@@ -302,7 +305,7 @@ input[type="time"],
 input[type="url"] {
   background-color: white;
   font-family: inherit;
-  border: 1px solid colors.$dark-gray;
+  border: 1px solid colors.$med-gray;
   color: colors.$blk;
   display: block;
   font-size: 0.875em;
