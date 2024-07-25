@@ -9,14 +9,18 @@
 // Style guide: atoms.form
 form {
   margin: 0 0 1em;
-}
 
-form .form-item {
-  padding: 0.5em;
-}
+  .form-item {
+    padding: 0.5em;
+  }
 
-form .webform-select-other .form-item {
-  padding: 0;
+  .webform-select-other,
+  .form-composite,
+  .form-checkboxes {
+    .form-item {
+      padding: 0;
+    }
+  }
 }
 
 .form-item {
@@ -111,6 +115,10 @@ input[type="file"] {
   width: 100%;
 }
 
+.form-checkboxes {
+  margin: 0.5em 0;
+}
+
 .form-type-radio {
   position: relative;
 }
@@ -202,21 +210,18 @@ fieldset {
   border-radius: 0;
   margin: 1em 0 2em;
 
-  .fieldset-wrapper fieldset {
-    margin-bottom: 0;
-    padding: 0 !important;
+  .fieldset-wrapper & {
+    margin: 0.5em 0;
   }
 }
 
 // Target the legend that occurs within
 .fieldset-wrapper fieldset legend .fieldset-legend {
-  border-bottom: 2px solid colors.$gold;
   background: transparent;
-  color: colors.$darker-gray;
-  text-transform: capitalize;
-  margin-left: 0.5rem;
-  padding-left: 0.25rem;
-  margin-bottom: 1rem;
+  font-weight: normal;
+  color: colors.$gray;
+  text-transform: unset;
+  padding: 0;
 }
 
 fieldset .fieldset-legend {
