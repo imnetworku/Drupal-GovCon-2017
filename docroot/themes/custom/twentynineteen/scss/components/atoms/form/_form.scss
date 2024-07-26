@@ -1,4 +1,5 @@
 @use "../../../base/variables/colors";
+@use "../../../base/extendables";
 
 // Forms
 //
@@ -9,10 +10,18 @@
 // Style guide: atoms.form
 form {
   margin: 0 0 1em;
-}
 
-form .form-item {
-  padding: 0.5em;
+  .form-item {
+    padding: 0.5em;
+  }
+
+  .webform-select-other,
+  .form-composite,
+  .form-checkboxes {
+    .form-item {
+      padding: 0;
+    }
+  }
 }
 
 .form-item {
@@ -74,8 +83,8 @@ input[type="password"],
 input[type="date"],
 textarea {
   font-family: inherit;
-  border: 1px solid colors.$dark-gray;
-  border-radius: 0;
+  border: 1px solid colors.$darker-gray;
+  border-radius: 4px;
   color: colors.$darker-gray;
   display: block;
   font-size: 1.1em;
@@ -107,35 +116,29 @@ input[type="file"] {
   width: 100%;
 }
 
+.form-checkboxes {
+  margin: 0.5em 0;
+}
+
 .form-type-radio {
   position: relative;
 }
 
 input[type="radio"],
 input[type="checkbox"] {
-  position: relative;
-  z-index: 10;
-  opacity: 0;
-  margin-left: 0.5em;
+  @extend .visually-hidden;
 
   + label {
-    position: relative;
-    display: inline-block;
     cursor: pointer;
-    padding: 0 0.5em;
-    margin-right: 1em;
 
     &::before {
       content: '';
-      position: absolute;
-      top: 0;
-      left: -20px;
-      z-index: -10px;
       display: inline-block;
       width: 20px;
       height: 20px;
-      margin-right: 1em;
-      background-color: colors.$color-primary;
+      margin-right: 0.5em;
+      vertical-align: text-top;
+      border: 2px solid colors.$color-primary;
     }
   }
 }
@@ -149,20 +152,17 @@ input[type="checkbox"] + label::before {
 }
 
 input[type="radio"]:checked + label::before {
-  content: "\2022";
-  color: colors.$white;
-  font-size: 4em;
-  text-align: center;
-  line-height: 0.335;
-}
-
-input[type="checkbox"]:checked + label::before {
-  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.7949219,7.095703 6.1816406,9.601563 12.205078,3.2753906 13.689453,4.8359375 6.1816406,12.724609 2.3105469,8.65625 Z' fill='white'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle r='7' cx='8' cy='8' fill='#{colors.encode-color(colors.$color-primary)}'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-  color: colors.$white;
-  text-align: center;
+}
+
+
+$myblue: colors.$color-primary;
+input[type="checkbox"]:checked + label::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.7949219,7.095703 6.1816406,9.601563 12.205078,3.2753906 13.689453,4.8359375 6.1816406,12.724609 2.3105469,8.65625 Z' fill='#{colors.encode-color(colors.$color-primary)}'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 input[type="radio"]:disabled + label::before,
@@ -172,8 +172,8 @@ input[type="checkbox"]:disabled + label::before {
 
 select {
   background: colors.$white;
-  border: 1px solid colors.$dark-gray;
-  border-radius: 0;
+  border: 1px solid colors.$darker-gray;
+  border-radius: 4px;
   color: colors.$darker-gray;
   text-transform: uppercase;
   font-size: 1em;
@@ -182,7 +182,6 @@ select {
   margin: 0 0 1em;
   outline: none;
   width: 100%;
-  max-width: 500px;
   -webkit-appearance: none;
   -moz-appearance: none;
   padding: 0.5em;
@@ -194,26 +193,30 @@ select {
   text-overflow: '';
 }
 
+.select2-container--default {
+  .select2-selection--single,
+  .select2-selection--multiple {
+    border: 1px solid colors.$darker-gray;
+  }
+}
+
 fieldset {
-  border: 1px solid colors.$med-gray;
+  border: 1px solid colors.$darker-gray;
   border-radius: 0;
   margin: 1em 0 2em;
 
-  .fieldset-wrapper fieldset {
-    margin-bottom: 0;
-    padding: 0 !important;
+  .fieldset-wrapper & {
+    margin: 0.5em 0;
   }
 }
 
 // Target the legend that occurs within
 .fieldset-wrapper fieldset legend .fieldset-legend {
-  border-bottom: 2px solid colors.$gold;
   background: transparent;
-  color: colors.$darker-gray;
-  text-transform: capitalize;
-  margin-left: 0.5rem;
-  padding-left: 0.25rem;
-  margin-bottom: 1rem;
+  font-weight: normal;
+  color: colors.$gray;
+  text-transform: unset;
+  padding: 0;
 }
 
 fieldset .fieldset-legend {
@@ -302,7 +305,7 @@ input[type="time"],
 input[type="url"] {
   background-color: white;
   font-family: inherit;
-  border: 1px solid colors.$dark-gray;
+  border: 1px solid colors.$darker-gray;
   color: colors.$blk;
   display: block;
   font-size: 0.875em;

@@ -43,3 +43,16 @@ $button-active: #162e51;
 $textarea: rgba(255, 253, 242, 1);
 $textarea-focus: rgba(128, 188, 250, 1);
 $legend: rgba(19, 73, 113, 0.9);
+
+// URL-encode hex colors, for use in SVG
+// From https://gist.github.com/certainlyakey/e9c0d8f5c87ff47e3d5b?permalink_comment_id=3458258#gistcomment-3458258
+@function encode-color($color) {
+  @if type-of($color) == 'color' and str-index(#{$color}, '#') == 1 {
+    $hex: str-slice(ie-hex-str($color), 4);
+    $color: unquote('#{$hex}');
+
+    @return '%23' + $color;
+  }
+
+  @return $color;
+}
