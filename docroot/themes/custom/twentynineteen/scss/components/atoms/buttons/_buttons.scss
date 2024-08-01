@@ -6,7 +6,7 @@
 //
 // Style guide: atoms.buttons
 
-button,
+button:not(.ck-button),
 .btn,
 .button,
 a.button,
