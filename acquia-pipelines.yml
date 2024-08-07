@@ -17,4 +17,7 @@ events:
       - setup-env:
           type: script
           script:
-            - echo 'hi'
+            - composer install --ansi
+            - source ${BLT_DIR}/scripts/pipelines/setup_env
+            - nvm install v14.17
+            - npm install -g npm@9.6.7
