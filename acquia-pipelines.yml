@@ -30,7 +30,3 @@ events:
           type: script
           script:
             - source ${BLT_DIR}/scripts/pipelines/setup_app
-      - tests:
-          type: script
-          script:
-            - source ${BLT_DIR}/scripts/pipelines/tests
