@@ -21,3 +21,8 @@ events:
             - source ${BLT_DIR}/scripts/pipelines/setup_env
             - nvm install v14.17
             - npm install -g npm@9.6.7
+      - validate:
+          type: script
+          script:
+            - source ${BLT_DIR}/scripts/pipelines/validate
+            - vendor/bin/grumphp run
