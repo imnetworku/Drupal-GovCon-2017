@@ -24,4 +24,4 @@ events:
       - validate:
           type: script
           script:
-            - source validate
+            - $SOURCE_DIR/vendor/bin/blt validate
