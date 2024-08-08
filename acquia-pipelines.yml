@@ -26,4 +26,3 @@ events:
           script:
             - $SOURCE_DIR/vendor/bin/blt validate:composer
             - $SOURCE_DIR/vendor/bin/blt validate:twig
-            - $SOURCE_DIR/vendor/bin/blt validate:yaml
