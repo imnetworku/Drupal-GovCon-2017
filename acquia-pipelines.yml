@@ -18,8 +18,7 @@ events:
           type: script
           script:
             - composer install --ansi
-            - source ${BLT_DIR}/scripts/pipelines/setup_env
       - validate:
           type: script
           script:
-            - $SOURCE_DIR/vendor/bin/blt validate:yaml
+            - $SOURCE_DIR/vendor/bin/blt validate:yaml -vvv
