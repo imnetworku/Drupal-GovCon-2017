@@ -5,6 +5,6 @@
 
 set -ev
 
-$SOURCE_DIR/vendor/bin/blt validate --define drush.alias='${drush.aliases.ci}' --ansi --verbose
+$SOURCE_DIR/vendor/bin/blt validate
 
 set +v
