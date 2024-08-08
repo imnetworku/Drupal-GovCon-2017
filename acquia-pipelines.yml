@@ -24,4 +24,4 @@ events:
       - validate:
           type: script
           script:
-            - source ${BLT_DIR}/scripts/pipelines/validate
+            - source validate
