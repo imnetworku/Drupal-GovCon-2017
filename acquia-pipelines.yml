@@ -28,3 +28,6 @@ events:
             - nvm list
             - node --version
             - npm --version
+      - background-processes:
+          type: script
+          script: ./home/local/bin/pipelines_background_process_trap.sh
