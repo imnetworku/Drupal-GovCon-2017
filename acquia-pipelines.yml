@@ -22,12 +22,3 @@ events:
           type: script
           script:
             - $SOURCE_DIR/vendor/bin/blt validate:yaml -vvv
-      - node-versions:
-          type: script
-          script:
-            - nvm list
-            - node --version
-            - npm --version
-      - background-processes:
-          type: script
-          script: ./home/local/bin/pipelines_background_process_trap.sh
